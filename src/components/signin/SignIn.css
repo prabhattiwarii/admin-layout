@@ -8,7 +8,7 @@
 .right-side .right-side-into{max-width: 461px;margin: 0 auto;}
 .right-side .heading{font-size:36px;color:#000;font-weight:700;font-family: Montserrat;}
 .right-side .sub-heading{font-size:16px;font-weight:400;color:#000;margin:10px 0 0;font-family:'Lato';}
-.right-side .other-account-wrap{display:flex;column-gap:25px;margin-top:28px;}
+.right-side .other-account-wrap{display:flex;column-gap:25px;margin-top:20px;}
 .right-side .other-account-wrap .app{display:flex;align-items:center;background:#FFFFFF;padding:8px 20px;column-gap:10px;border-radius:8px;cursor: pointer;}
 .right-side .other-account-wrap .app .icon{height:16px;}
 .right-side .other-account-wrap .app .text{font-size:14px;font-weight:400;color:#858585;font-family:Montserrat;}
@@ -19,6 +19,6 @@
 .right-side .form-wrap .field-group .input:focus-visible{border:none;outline:none;}
 .right-side .form-wrap .forgot-link{text-decoration:none;color:#346BD4;font-size:16px;font-weight:400;font-family:'Lato';}
 .right-side .form-wrap .btn-wrap{padding:20px 0 0;}
-.right-side .form-wrap .btn-wrap .btn{width:100%;border-radius:10px;background:#4285F4;padding:10px;border:none;color:#FFFFFF;font-size: 16px;font-weight:700;font-family: Montserrat;}
-.right-side .register{font-size:16px;font-weight:400;font-family:'Lato';text-align: center;}
+.right-side .form-wrap .btn-wrap .btn{width:100%;border-radius:10px;background:#4285F4;padding:10px;border:none;color:#FFFFFF;font-size: 16px;font-weight:700;font-family: Montserrat;cursor: pointer;}
+.right-side .register{font-size:16px;font-weight:400;font-family:'Lato';text-align: center;padding:20px 0 0;}
 .right-side .register .link{text-decoration:none;color:#346BD4;}

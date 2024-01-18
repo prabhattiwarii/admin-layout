@@ -1,8 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignIn.css";
-import { appleIcon, carbonIcon, gitIcon, googleIcon, linkdinIcon, twiterIcon } from "../../helpers/Icon";
+import {appleIcon,carbonIcon,gitIcon,googleIcon,linkdinIcon,twiterIcon} from "../../helpers/Icon";
+import {hasValidationError,validationError,focusOnFeild} from "../../helpers/frontend";
 
 const SignIn = () => {
+    const [form,setForm] = useState({email:"",password:""});
+    const [errors,setErrors] = useState([])
+    const handleChange = (e) => {
+        setForm({...form,[e.target.name]: e.target.value,});
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const newError = {};
+        let positionFocus = "";
+         // eslint-disable-next-line
+        const emailRE = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+        if(!form.email || !form.email.trim()){
+            newError["email"] = "Required";
+            positionFocus = positionFocus || "email";
+        }else if(form.email && form.email.length > 50){
+            newError["email"] = "Maximum 50 characters allowed";
+            positionFocus = positionFocus || "email";
+        }else if(form.email && !emailRE.test(form.email)){
+            newError["email"] = "Enter a valid email";
+            positionFocus = positionFocus || "email";
+        }
+        if(!form.password || !form.password.trim()){
+            newError["password"] = "Required";
+            positionFocus = positionFocus || "password";
+        }else if (!form.password || form.password.trim().length < 8) {
+            newError["password"] = "Password must be at least 8 characters";
+            positionFocus = positionFocus || "password";
+        }
+        setErrors(newError);
+        if(positionFocus){
+            focusOnFeild(positionFocus);
+            return false;
+        }
+        window.location = "/admin-layout"
+        return true;
+    }
   return (
     <div className="sign-wrap">
         <div className="left-side">
@@ -29,14 +66,16 @@ const SignIn = () => {
                         <div className="text">Sign in with Apple</div>
                     </div>
                 </div>
-                <form action="" className="form-wrap">
+                <form action="" onSubmit={handleSubmit} className="form-wrap" autoComplete="off">
                     <div className="field-group">
                         <label htmlFor="email" className="label">Email address</label>
-                        <input className="input" type="email" name="" id="" placeholder="Enter Email Address"/>
+                        <input type="text" name="email" id="email" placeholder="Enter Email Address" className={`input ${(hasValidationError(errors,"email") ? "input-error" : "")}`} value={form.email} onChange={handleChange}/>
+                        {hasValidationError(errors,"email") ? (<span className="error">{validationError(errors,"email")}</span>) : null}
                     </div>
                     <div className="field-group">
                         <label htmlFor="password" className="label">Password</label>
-                        <input className="input" type="password" name="" id="" placeholder="Enter Password"/>
+                        <input type="password" name="password" id="password" placeholder="Enter Password" className={`input ${(hasValidationError(errors,"password") ? "input-error" : "")}`} value={form.password} onChange={handleChange}/>
+                        {hasValidationError(errors,"password") ? (<span className="error">{validationError(errors,"password")}</span>) : null}
                     </div>
                     <a href="/" className="forgot-link">Forgot password?</a>
                     <div className="btn-wrap"><button type="submit" className="btn">Sign In</button></div>
