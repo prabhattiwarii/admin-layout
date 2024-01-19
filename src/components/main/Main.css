@@ -1,1 +1,55 @@
-.main{flex:1;}
+.main{flex:1;padding:20px 60px 0 50px;display:flex;flex-direction:column;row-gap:40px;}
+.main .dashboard-top-wrap{display:flex;flex-wrap:wrap;column-gap:20px;}
+.main .dashboard-top-wrap .item .icon{width:31px;height:31px;border-radius:30px;display: flex;align-items: center;justify-content: center;}
+.main .dashboard-top-wrap .item{width:calc(25% - 65px);background-color:#ffffff;border-radius:20px;box-shadow: 4px 4px 10px 3px #E0E0E0;padding:18px 25px;}
+.main .dashboard-top-wrap .item .total-wrap{display:flex;align-items:end;justify-content:space-between;}
+.main .dashboard-top-wrap .item .total-wrap .total-item .title{font-size:12px;font-weight: 400;color: #000;font-family: Lato;margin:5px 0;}
+.main .dashboard-top-wrap .item .total-wrap .total-item .total{font-size:20px;font-weight:700;color: #000;}
+.main .dashboard-top-wrap .item .total-wrap .percent{color:#3CC952;padding:4px 8px;font-size:12px;font-weight:600;border-radius: 34px;background: #E9F9EB;}
+.main .box{background-color:#ffffff;border-radius:20px;box-shadow: 4px 4px 10px 3px #E0E0E0;padding:30px 40px;flex:1;}
+.main .charts{height:100%;}
+.main .charts .top-charts{display: flex;justify-content: space-between;align-items: center;}
+.main .charts .top-charts .left-side-charts .heading{color: #000;font-family: Montserrat;font-size: 18px;font-weight: 700;}
+.main .charts .top-charts .left-side-charts .month-details{font-size: 14px;color:#858585;font-weight: 400;font-family: Montserrat;margin-top:5px;}
+.main .charts .top-charts .right-side-charts{display: flex;align-items: center;}
+.main .charts .top-charts .right-side-charts .title{font-size: 14px;color: #000;font-family: Lato;font-weight: 400;}
+.main .charts .top-charts .right-side-charts .mr{margin-right:30px;}
+.main .charts .top-charts .right-side-charts .guest{width:8px;height:8px;background-color:#E9A0A0;border-radius:30px;margin-right:10px;}
+.main .charts .top-charts .right-side-charts .user{width:8px;height:8px;background-color:#9BDD7C;border-radius:30px;margin-right:10px;}
+/* .main svg g line{display:none;} */
+.main .bottom-info{display:flex;column-gap:40px;}
+.main .bottom-info .product-data .product-data-top{display:flex;justify-content:space-between;margin:0 0 20px;}
+.main .bottom-info .product-data .product-data-top .heading{color: #000;font-family: Montserrat;font-size: 18px;font-weight: 700;}
+.main .bottom-info .product-data .product-data-top .month-details{font-size:14px;color:#858585;font-weight: 400;font-family: Montserrat;}
+.main .bottom-info .product-data .product-data-bottom{display:flex;justify-content:space-between;}
+.main .bottom-info .product-data .product-data-bottom .details{display: flex;flex-direction:column;row-gap:20px;}
+.main .bottom-info .product-data .product-data-bottom .details .info{display: flex;align-items: baseline;column-gap:10px;row-gap:20px;}
+.main .bottom-info .product-data .product-data-bottom .details .info .title{font-size: 14px;font-weight: 700;color: #000;font-family: Montserrat;}
+.main .bottom-info .product-data .product-data-bottom .details .info .percentage{font-size: 12px;font-weight:400;color:#858585;font-family:Lato;}
+.main .bottom-info .product-data .product-data-bottom .details .tees{width:10px;height:10px;border-radius:30px;display:inline-block;background:#98D89E;}
+.main .bottom-info .product-data .product-data-bottom .details .pants{width:10px;height:10px;border-radius:30px;display:inline-block;background:#F6DC7D;}
+.main .bottom-info .product-data .product-data-bottom .details .hoodies{width:10px;height:10px;border-radius:30px;display:inline-block;background:#EE8484;}
+.main .bottom-info .add-profile{display: flex;flex-direction: column;align-items: center;justify-content: center;row-gap:15px;}
+.main .bottom-info .add-profile .add-icon{background: #F5F5F5;border-radius: 50%;width: 76px;height: 76px;display: flex;align-items: center;justify-content: center;cursor: pointer;} 
+.main .bottom-info .add-profile .text{font-size: 16px;color: #858585;font-weight: 600;line-height: 24px;}
+div[role="progressbar1"] {
+    --size:8rem;
+    --fg1: #98D89E;
+    --fg2: #EE8484;
+    --fg3: #F6DC7D;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background:
+      radial-gradient(closest-side, white 77%, transparent 0 99.9%, white 0),
+      conic-gradient(
+        var(--fg1) calc(0%),
+        var(--fg1) calc(var(--pgPercentage) * 0.60),
+        var(--fg2) 0,
+        var(--fg2) calc(var(--pgPercentage) * 0.90),
+        var(--fg3) 0
+      );
+  }
+  

@@ -1,0 +1,9 @@
+.popup-wrap{display:flex;align-items:center;justify-content:center;position:fixed;top:0;right:0;left:0;bottom:0;z-index:999;backdrop-filter:blur(2px);background-color:#0000003d;padding:0 20px;}
+.popup-wrap .back{position:absolute;top:0;right:0;left:0;bottom:0;}
+.popup-wrap .inner{background:#fff;width:100%;max-width:550px;padding:40px 60px;border-radius:12px;display:flex;flex-direction:column;position:relative;align-items:center;}
+.popup-wrap .inner .close{position:absolute;top:30px;right:30px;}
+.popup-wrap .inner .head-wrap{flex-direction:column;align-items:flex-start;margin:0 0 10px;align-self:flex-start;}
+.popup-wrap .inner .head-wrap .heading{color:#211E24;margin:0 0 8px;}
+.popup-wrap .inner .heading{color:#211E24;opacity: 0.8;text-align:center;}
+.popup-wrap .inner .text{color:#211E24;opacity:0.8;text-align:left;}
+.btn-wrap{display:flex;column-gap:20px;}

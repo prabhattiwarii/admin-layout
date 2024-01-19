@@ -6,9 +6,11 @@ import "./AdminLayOut.css"
 const AdminLayOut = () => {
   return (
     <div className="container">
-        <Header/>
         <SideBar/>
-        <Main/>
+        <div className="layout">
+            <Header/>
+            <Main/>
+        </div>
     </div>
   )
 }
