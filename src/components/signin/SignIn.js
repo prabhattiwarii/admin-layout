@@ -37,7 +37,7 @@ const SignIn = () => {
             focusOnFeild(positionFocus);
             return false;
         }
-        window.location = "/admin-layout"
+        window.location = "/admin/dashboard"
         return true;
     }
   return (

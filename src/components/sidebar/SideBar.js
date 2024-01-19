@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SideBar.css";
 import {dashboardIcon,schedulesIcon,settingIcon,transactionIcon,userIcon} from "../../helpers/Icon";
 
 const SideBar = () => {
+    const [activeTab, setActiveTab] = useState(1);
+    const tabs = [
+        { id: 1, icon: dashboardIcon, label: "Dashboard", link: "/admin/dashboard"},
+        { id: 2, icon: transactionIcon, label: "Transactions", link: "/" },
+        { id: 3, icon: schedulesIcon, label: "Schedules", link: "/" },
+        { id: 4, icon: userIcon, label: "Users", link: "/" },
+        { id: 5, icon: settingIcon, label: "Settings", link: "/" }
+      ];
+    
   return (
-    <div className="sidebar">
+    <div className="sidebar position">
         <div className="sidebar-title">Board.</div>
         <ul className="sidebar-lists">
-            <li className="list-item"><a href="/" className="link"><span>{dashboardIcon({width:18,height:18})}</span> Dashboard</a></li>
-            <li className="list-item"><a href="/" className="link"><span>{transactionIcon({width:18,height:18})}</span> Transactions</a></li>
-            <li className="list-item"><a href="/" className="link"><span>{schedulesIcon({width:18,height:18})}</span> Schedules</a></li>
-            <li className="list-item"><a href="/" className="link"><span>{userIcon({width:18,height:18})}</span> Users</a></li>
-            <li className="list-item"><a href="/" className="link"><span>{settingIcon({width:18,height:18})}</span> Settings</a></li>
+            {tabs.map((tab) => (
+            <li key={tab.id} className="list-item">
+                <a href={tab.link} className={`link ${activeTab === tab.id ? "active" : ""}`}><span>{tab.icon({ width: 18, height: 18 })}</span> {tab.label}</a>
+            </li>
+            ))}
         </ul>
         <div className="sidebar-footer">
             <div className="list-item"><a href="/" className="link">Help</a></div>

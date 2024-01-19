@@ -1,5 +1,5 @@
 .header{height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 40px 0 50px;position:sticky;width: 100%;
-    box-sizing: border-box;flex-shrink: 0;;z-index: 1100;top: 0px;left: auto;right: 0px;}
+    box-sizing: border-box;flex-shrink: 0;z-index: 11;top: 0px;left: auto;right: 0px;}
 .header .title{font-size:24px;font-weight:700;}
 .header .right-wrap{display: flex;align-items: center;}
 .header .right-wrap .input-box{position:relative;}

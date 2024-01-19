@@ -1,4 +1,4 @@
-.main{flex:1;padding:20px 60px 0 50px;display:flex;flex-direction:column;row-gap:40px;}
+.main{flex:1;padding:20px 60px 29px 50px;display:flex;flex-direction:column;row-gap:40px;}
 .main .dashboard-top-wrap{display:flex;flex-wrap:wrap;column-gap:20px;}
 .main .dashboard-top-wrap .item .icon{width:31px;height:31px;border-radius:30px;display: flex;align-items: center;justify-content: center;}
 .main .dashboard-top-wrap .item{width:calc(25% - 65px);background-color:#ffffff;border-radius:20px;box-shadow: 4px 4px 10px 3px #E0E0E0;padding:18px 25px;}
@@ -8,7 +8,7 @@
 .main .dashboard-top-wrap .item .total-wrap .percent{color:#3CC952;padding:4px 8px;font-size:12px;font-weight:600;border-radius: 34px;background: #E9F9EB;}
 .main .box{background-color:#ffffff;border-radius:20px;box-shadow: 4px 4px 10px 3px #E0E0E0;padding:30px 40px;flex:1;}
 .main .charts{height:100%;}
-.main .charts .top-charts{display: flex;justify-content: space-between;align-items: center;}
+.main .charts .top-charts{display: flex;justify-content: space-between;align-items: center;padding:0 0 30px;}
 .main .charts .top-charts .left-side-charts .heading{color: #000;font-family: Montserrat;font-size: 18px;font-weight: 700;}
 .main .charts .top-charts .left-side-charts .month-details{font-size: 14px;color:#858585;font-weight: 400;font-family: Montserrat;margin-top:5px;}
 .main .charts .top-charts .right-side-charts{display: flex;align-items: center;}
@@ -32,6 +32,10 @@
 .main .bottom-info .add-profile{display: flex;flex-direction: column;align-items: center;justify-content: center;row-gap:15px;}
 .main .bottom-info .add-profile .add-icon{background: #F5F5F5;border-radius: 50%;width: 76px;height: 76px;display: flex;align-items: center;justify-content: center;cursor: pointer;} 
 .main .bottom-info .add-profile .text{font-size: 16px;color: #858585;font-weight: 600;line-height: 24px;}
+.main .bottom-info .profile .name{color: #000;font-size: 24px;font-weight: 600;line-height: 24px;text-transform:capitalize;}
+.main .bottom-info .profile .personal-deatils-wrap{flex-wrap: wrap;display: flex;column-gap:9px;padding: 60px 0 0;row-gap: 26px;justify-content: space-between;}
+.main .bottom-info .profile .personal-deatils-wrap .detail{width: calc(50% - 5px);font-size:14px;font-weight: 400;color: #231F20;display: flex;column-gap: 10px;}
+.main .bottom-info .profile .personal-deatils-wrap .whatsapp svg path{fill:#fff;}
 div[role="progressbar"] {
     --size:8rem;
     --fg1: #98D89E;
