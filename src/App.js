@@ -14,6 +14,7 @@ function App() {
             <Route path="/admin/transactions" element={<AdminLayOut/>}/>
             <Route path="/admin/schedules" element={<AdminLayOut/>}/>
             <Route path="/admin/users" element={<AdminLayOut/>}/>
+            <Route path="/admin/settings" element={<AdminLayOut/>}/>
         </Routes>
     </BrowserRouter>
   );

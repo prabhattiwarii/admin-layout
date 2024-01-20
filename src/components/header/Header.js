@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import "./Header.css";
-import {notificationIcon, searchIcon,menuIcon,closeIcon} from "../../helpers/Icon";
-const Header = () => {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
-
-    const toggleSidebar = () => {
-        setSidebarOpen((prevSidebarOpen) => !prevSidebarOpen);
+import {notificationIcon,searchIcon,menuIcon,closeIcon} from "../../helpers/Icon";
+const Header = ({page,toggleSidebar}) => {
+    const [showSideBar, setShowSideBar] = useState(true);
+    const handleToggleSidebar = () => {
+        toggleSidebar();
+        setShowSideBar((prevShowSideBar) => !prevShowSideBar);
     };
   return (
     <>
     <div className="header">
         <div className="left-wrap">
-            <button className="toggle-button" onClick={toggleSidebar}>{sidebarOpen ? closeIcon({width:18,height:18}) : menuIcon({width:18,height:18})}</button>
-            <div className="title">Dashboard</div>
+            <button className={`${showSideBar ? "toggle" : "toggle-button"}`} onClick={handleToggleSidebar}>{showSideBar ? closeIcon({width:18,height:18}) : menuIcon({width:18,height:18})}</button>
+            <div className="title">{page.active}</div>
         </div>
         <div className="right-wrap">
             <div className="input-box">

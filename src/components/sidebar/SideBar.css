@@ -8,10 +8,14 @@
 .sidebar .sidebar-lists .active{font-size:18px;font-weight:700;}
 .sidebar .sidebar-footer{display:flex;flex-direction:column;row-gap:20px;}
 .sidebar .sidebar-footer .list-item .link{text-decoration:none;color:#FFF;font-family:Montserrat;font-size:14px;font-weight:400;}
+.toggle{display: none;}
 @media(max-width:1164px){
     .sidebar-wrap{width:245px;}
     .sidebar{padding:40px 0px 40px 30px;width:210px;}
 }
 @media(max-width:991px){
     .sidebar-wrap{display:none;}
+    .sidebar-open{display: block !important;z-index:111111;position: absolute;}
+    .toggle{z-index: 11111111;position: absolute;left:224px;border-radius:50%;padding: 3px;background-color: #4285F4;border:none;display: block;}
+    .toggle svg path{stroke:#fff;}
 }
