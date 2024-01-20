@@ -11,6 +11,9 @@ function App() {
             <Route path="/" element={<SignIn/> } />
             <Route path="/signin" element={<SignIn/>}/>
             <Route path="/admin/dashboard" element={<AdminLayOut/>}/>
+            <Route path="/admin/transactions" element={<AdminLayOut/>}/>
+            <Route path="/admin/schedules" element={<AdminLayOut/>}/>
+            <Route path="/admin/users" element={<AdminLayOut/>}/>
         </Routes>
     </BrowserRouter>
   );

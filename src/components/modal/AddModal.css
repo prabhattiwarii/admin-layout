@@ -18,3 +18,17 @@
 .btn-wrap{display: flex;justify-content:flex-end;padding:24px;gap:16px;}
 .btn-wrap .next-btn{border-radius:8px;background:#3E84F8;padding:8px 16px;border:none;color:#FFF;font-size: 14px;font-weight: 600;line-height: 24px;cursor: pointer;}
 .btn-wrap .back-btn{border-radius:8px;padding:8px 16px;border:1px solid #999CA0;background:#fff;cursor: pointer;}
+
+@media(max-width:767px){
+    .popup-wrap{padding:0 !important;align-items:flex-end !important;}
+    .popup-wrap .inner{padding:20px !important;border-radius:12px 12px 0 0 !important;}
+}
+@media(max-width:576px){
+    .popup-wrap{padding:0 !important;align-items:flex-end !important;}
+    .popup-wrap .inner{padding:20px !important;border-radius:12px 12px 0 0 !important;}
+    .popup-wrap .inner .tab-wrap .btn{padding:0 50px;}
+    .popup-wrap .inner .form .field-group .label{font-size:14px;}
+    .popup-wrap .inner .form .field-group .input{font-size:14px;}
+    .popup-wrap .inner .form .field-group .input::placeholder{font-size:14px;}
+    .popup-wrap .inner .close-icon{top:36px;right:40px;}
+}

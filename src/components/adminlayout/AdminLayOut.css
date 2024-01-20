@@ -1,5 +1,2 @@
-.container{display:flex;height:100vh;}
-.container .layout{box-sizing: border-box;
-    width: 80%;
-    position: absolute;
-    right: 0;}
+.container{display:flex;height:100%;}
+.container .layout{flex-grow:1;min-width:0px;display:flex;min-height:100vh;flex-direction:column;}
