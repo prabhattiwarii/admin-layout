@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./SignIn.css";
-import {appleIcon,carbonIcon,gitIcon,googleIcon,linkdinIcon,twiterIcon} from "../../helpers/Icon";
+import {appleIcon,carbonIcon,gitIcon,linkdinIcon,twiterIcon} from "../../helpers/Icon";
 import {hasValidationError,validationError,focusOnFeild} from "../../helpers/frontend";
 import GoogleLogin from 'react-google-login';
 import AppleLogin from 'react-apple-login';

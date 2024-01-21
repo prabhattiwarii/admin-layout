@@ -10,9 +10,9 @@ const AddModal = ({modalAction,dashBoardData,updateDashBoardData}) => {
 
     const handleChange = (e) => {
         const {name,value} = e.target;
-        if(name == "phone"){
+        if(name === "phone"){
             let newValue = value.replace(/[^0-9]/gi,'');
-            if(newValue == "" || newValue.length <= 10){
+            if(newValue === "" || newValue.length <= 10){
                 handleCustom(name,newValue);
             }
         }else{
@@ -47,7 +47,7 @@ const AddModal = ({modalAction,dashBoardData,updateDashBoardData}) => {
     const validate = () => {
         const newErrors = {};
         let positionFocus = "";
-
+        // eslint-disable-next-line
         const emailRE = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
         if (!form.name || !form.name.trim()) {

@@ -2,7 +2,7 @@
 .main .dashboard-top-wrap{display:flex;flex-wrap:wrap;column-gap:20px;}
 .main .dashboard-top-wrap .item .icon{width:31px;height:31px;border-radius:30px;display: flex;align-items: center;justify-content: center;}
 .main .dashboard-top-wrap .item{width:calc(25% - 65px);background-color:#ffffff;border-radius:20px;box-shadow: 4px 4px 10px 3px #E0E0E0;padding:18px 25px;}
-.main .dashboard-top-wrap .item .total-wrap{display:flex;align-items:end;justify-content:space-between;}
+.main .dashboard-top-wrap .item .total-wrap{display:flex;align-items:flex-end;justify-content:space-between;}
 .main .dashboard-top-wrap .item .total-wrap .total-item .title{font-size:12px;font-weight: 400;color: #000;font-family: Lato;margin:5px 0;}
 .main .dashboard-top-wrap .item .total-wrap .total-item .total{font-size:20px;font-weight:700;color: #000;}
 .main .dashboard-top-wrap .item .total-wrap .percent{color:#3CC952;padding:4px 8px;font-size:12px;font-weight:600;border-radius: 34px;background: #E9F9EB;}
@@ -16,7 +16,6 @@
 .main .charts .top-charts .right-side-charts .mr{margin-right:30px;}
 .main .charts .top-charts .right-side-charts .guest{width:8px;height:8px;background-color:#E9A0A0;border-radius:30px;margin-right:10px;}
 .main .charts .top-charts .right-side-charts .user{width:8px;height:8px;background-color:#9BDD7C;border-radius:30px;margin-right:10px;}
-/* .main svg g line{display:none;} */
 .main .bottom-info{display:flex;column-gap:40px;}
 .main .bottom-info .product-data .product-data-top{display:flex;justify-content:space-between;margin:0 0 20px;}
 .main .bottom-info .product-data .product-data-top .heading{color: #000;font-family: Montserrat;font-size: 18px;font-weight: 700;}
