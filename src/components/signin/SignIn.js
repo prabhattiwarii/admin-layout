@@ -81,7 +81,7 @@ const SignIn = () => {
             <div className="right-side-into">
                 <div className="heading">Sign In</div>
                 <div className="sub-heading">Sign in to your account</div>
-                <div className="other-account-wrap">
+                <div className="account-wrap">
                     <div className="app">
                     <GoogleLogin
                         clientId="your-google-id"

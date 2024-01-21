@@ -8,12 +8,12 @@
 .right-side .right-side-into{max-width:461px;margin:0 auto;}
 .right-side .heading{font-size:36px;color:#000;font-weight:700;font-family:Montserrat;}
 .right-side .sub-heading{font-size:16px;font-weight:400;color:#000;margin:10px 0 0;font-family:'Lato';}
-.right-side .other-account-wrap{display:flex;column-gap:25px;margin-top:20px;}
-.right-side .other-account-wrap .apple{display:flex;align-items:center;background:#FFFFFF;padding:8px 20px;column-gap:10px;border-radius:8px;cursor:pointer;}
-.right-side .other-account-wrap .app button{background-color:none !important;border:none;box-shadow:none !important;opacity:1 !important;}
-.right-side .other-account-wrap .app button span{font-size:14px !important;font-weight:400 !important;color:#858585 !important;font-family:Montserrat !important;opacity:1;}
-.right-side .other-account-wrap .apple .icon{height:16px;}
-.right-side .other-account-wrap .apple .text{font-size:14px;font-weight:400;color:#858585;font-family:Montserrat;}
+.right-side .account-wrap{display:flex;column-gap:25px;margin-top:20px;}
+.right-side .account-wrap .apple{display:flex;align-items:center;background:#FFFFFF;padding:8px 20px;column-gap:10px;border-radius:8px;cursor:pointer;}
+.right-side .account-wrap .app button{background-color:none !important;border:none;box-shadow:none !important;opacity:1 !important;}
+.right-side .account-wrap .app button span{font-size:14px !important;font-weight:400 !important;color:#858585 !important;font-family:Montserrat !important;opacity:1;}
+.right-side .account-wrap .apple .icon{height:16px;}
+.right-side .account-wrap .apple .text{font-size:14px;font-weight:400;color:#858585;font-family:Montserrat;}
 .right-side .form-wrap{max-width:450px;background-color:#FFFFFF;padding:32px;margin-top:25px;}
 .right-side .form-wrap .field-group{display:flex;flex-direction:column;padding:0 0 20px;}
 .right-side .form-wrap .field-group .label{font-size:16px;font-weight:400;font-family:'Lato';margin:0 0 10px;}
@@ -35,11 +35,11 @@
     .left-side .social-icon a svg{width:14px}
     .right-side{height:auto;padding:20px 0 0;}
     .right-side .heading{font-size:28px;}
-    .right-side .other-account-wrap,
+    .right-side .account-wrap,
     .right-side .form-wrap,
     .right-side .register{margin-top:20px;}
   };
   @media (max-width:479px){
     .right-side{height:auto;padding:20px;}
-    .right-side .other-account-wrap{column-gap:15px;}
+    .right-side .account-wrap{column-gap:15px;}
   }
