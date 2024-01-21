@@ -84,7 +84,7 @@ const SignIn = () => {
                 <div className="other-account-wrap">
                     <div className="app">
                     <GoogleLogin
-                        clientId="your-google-client-id"
+                        clientId="your-google-id"
                         buttonText="Sign in with Google"
                         onSuccess={responseGoogle}
                         onFailure={responseGoogle}
@@ -92,7 +92,7 @@ const SignIn = () => {
                     />
                     </div>
                     <AppleLogin
-                        clientId="your-apple-client-id"
+                        clientId="your-apple-id"
                         redirectURI="your-apple-redirect-uri"
                         onSuccess={responseApple}
                         onFailure={responseApple}
