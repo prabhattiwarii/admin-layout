@@ -14,7 +14,7 @@ const Header = ({page,toggleSidebar}) => {
             <div className="title">{page.active}</div>
         </div>
         <div className="right-wrap">
-            <div className={`input-box ${showSideBar ? "search" : "" }`}>
+            <div className="input-box">
                 <input type="text" className="input" placeholder="Search..."/>
                 <div className="search-box">{searchIcon({width:12,height:12})}</div>
             </div>

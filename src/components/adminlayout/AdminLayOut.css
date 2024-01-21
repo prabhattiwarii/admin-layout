@@ -1,3 +1,5 @@
 .container{display:flex;height:100%;}
 .container .layout{flex-grow:1;min-width:0px;display:flex;min-height:100vh;flex-direction:column;position:relative;transition:.3s all;}
-.opacity{position:absolute;background:#0000005e;top:0;bottom:0;left:0;right:0;}
+@media(max-width:991px){
+    .opacity{position:absolute;background:#0000005e;top:0;bottom:0;left:0;right:0;z-index:1;}
+}

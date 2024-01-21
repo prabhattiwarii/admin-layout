@@ -9,7 +9,7 @@ const SignIn = () => {
     const [form,setForm] = useState({email:"",password:""});
     const [errors,setErrors] = useState([])
     const handleChange = (e) => {
-        setForm({...form,[e.target.name]: e.target.value,});
+        setForm({...form,[e.target.name]: e.target.value});
     }
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -58,12 +58,12 @@ const SignIn = () => {
         console.log(response);
       };
 
-      const CustomAppleButton = ({ onClick }) => (
+    const CustomAppleButton = ({ onClick }) => (
         <div className="apple" onClick={onClick}>
-          <span className="icon">{appleIcon({ width: 16, height: 16 })}</span>
-          <div className="text">Sign in with Apple</div>
+            <span className="icon">{appleIcon({ width: 16, height: 16 })}</span>
+            <div className="text">Sign in with Apple</div>
         </div>
-      );
+    );
     
   return (
     <div className="sign-wrap">
