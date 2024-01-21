@@ -1,9 +1,7 @@
 import React, {useState} from "react";
 import "./SignIn.css";
-import {appleIcon,carbonIcon,gitIcon,linkdinIcon,twiterIcon} from "../../helpers/Icon";
+import {appleIcon,carbonIcon,gitIcon,linkdinIcon,twiterIcon,googleIcon} from "../../helpers/Icon";
 import {hasValidationError,validationError,focusOnFeild} from "../../helpers/frontend";
-import GoogleLogin from 'react-google-login';
-import AppleLogin from 'react-apple-login';
 
 const SignIn = () => {
     const [form,setForm] = useState({email:"",password:""});
@@ -48,22 +46,6 @@ const SignIn = () => {
         window.location = "/admin/dashboard"
         return true;
     }
-    const responseGoogle = (response) => {
-        // Handle Google login response
-        console.log(response);
-      };
-    
-      const responseApple = (response) => {
-        // Handle Apple login response
-        console.log(response);
-      };
-
-    const CustomAppleButton = ({ onClick }) => (
-        <div className="apple" onClick={onClick}>
-            <span className="icon">{appleIcon({ width: 16, height: 16 })}</span>
-            <div className="text">Sign in with Apple</div>
-        </div>
-    );
     
   return (
     <div className="sign-wrap">
@@ -81,25 +63,15 @@ const SignIn = () => {
             <div className="right-side-into">
                 <div className="heading">Sign In</div>
                 <div className="sub-heading">Sign in to your account</div>
-                <div className="account-wrap">
+                <div className="other-account-wrap">
                     <div className="app">
-                    <GoogleLogin
-                        clientId="your-google-id"
-                        buttonText="Sign in with Google"
-                        onSuccess={responseGoogle}
-                        onFailure={responseGoogle}
-                        cookiePolicy={'single_host_origin'}
-                    />
+                        <span className="icon">{googleIcon({width:16,height:16})}</span>
+                        <div className="text">Sign in with Google</div>
                     </div>
-                    <AppleLogin
-                        clientId="your-apple-id"
-                        redirectURI="your-apple-redirect-uri"
-                        onSuccess={responseApple}
-                        onFailure={responseApple}
-                        render={(props) => (
-                        <CustomAppleButton onClick={props.onClick} />
-                        )}
-                    />
+                    <div className="app">
+                        <span className="icon">{appleIcon({width:16,height:16})}</span>
+                        <div className="text">Sign in with Apple</div>
+                    </div>
                 </div>
                 <form action="" onSubmit={handleSubmit} className="form-wrap" autoComplete="off">
                     <div className="field-group">
