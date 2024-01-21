@@ -1,24 +1,45 @@
 .sign-wrap{display:flex;width:100%;}
-.sign-wrap:after {content: ' ';border-top: 100vh solid #4285F4;border-right:5vw solid transparent;width: 45%;position: absolute;}
-.left-side{height:100vh;display:flex;align-items:center;flex:1;z-index: 1;position: relative;justify-content: center;}
+.sign-wrap:after{content:' ';border-top:100vh solid #4285F4;border-right:5vw solid transparent;width:45%;position:absolute;}
+.left-side{height:100vh;display:flex;align-items:center;flex:1;z-index:1;position:relative;justify-content:center;}
 .left-side .text{font-size:48px;font-weight:700;color:#fff;margin:0 auto;}
 .left-side .logo{font-size:24px;font-weight:700;color:#fff;position:absolute;top:40px;left:40px;}
 .left-side .social-icon{position:absolute;bottom:40px;display:flex;align-items:center;column-gap:30px;}
-.right-side{flex:1;height:100vh;background-color:#F8FAFF;display: flex;flex-direction: column;justify-content: center;}
-.right-side .right-side-into{max-width: 461px;margin: 0 auto;}
-.right-side .heading{font-size:36px;color:#000;font-weight:700;font-family: Montserrat;}
+.right-side{flex:1;height:100vh;background-color:#F8FAFF;display:flex;flex-direction:column;justify-content:center;}
+.right-side .right-side-into{max-width:461px;margin:0 auto;}
+.right-side .heading{font-size:36px;color:#000;font-weight:700;font-family:Montserrat;}
 .right-side .sub-heading{font-size:16px;font-weight:400;color:#000;margin:10px 0 0;font-family:'Lato';}
 .right-side .other-account-wrap{display:flex;column-gap:25px;margin-top:20px;}
-.right-side .other-account-wrap .app{display:flex;align-items:center;background:#FFFFFF;padding:8px 20px;column-gap:10px;border-radius:8px;cursor: pointer;}
-.right-side .other-account-wrap .app .icon{height:16px;}
-.right-side .other-account-wrap .app .text{font-size:14px;font-weight:400;color:#858585;font-family:Montserrat;}
+.right-side .other-account-wrap .apple{display:flex;align-items:center;background:#FFFFFF;padding:8px 20px;column-gap:10px;border-radius:8px;cursor:pointer;}
+.right-side .other-account-wrap .app button{background-color:none !important;border:none;box-shadow:none !important;opacity:1 !important;}
+.right-side .other-account-wrap .app button span{font-size:14px !important;font-weight:400 !important;color:#858585 !important;font-family:Montserrat !important;opacity:1;}
+.right-side .other-account-wrap .apple .icon{height:16px;}
+.right-side .other-account-wrap .apple .text{font-size:14px;font-weight:400;color:#858585;font-family:Montserrat;}
 .right-side .form-wrap{max-width:450px;background-color:#FFFFFF;padding:32px;margin-top:25px;}
-.right-side .form-wrap .field-group{display: flex;flex-direction: column;padding:0 0 20px;}
+.right-side .form-wrap .field-group{display:flex;flex-direction:column;padding:0 0 20px;}
 .right-side .form-wrap .field-group .label{font-size:16px;font-weight:400;font-family:'Lato';margin:0 0 10px;}
 .right-side .form-wrap .field-group .input{background:#F5F5F5;border-radius:10px;border:none;padding:10px 16px;font-size:16px;font-weight:400;font-family:'Lato';}
 .right-side .form-wrap .field-group .input:focus-visible{border:none;outline:none;}
 .right-side .form-wrap .forgot-link{text-decoration:none;color:#346BD4;font-size:16px;font-weight:400;font-family:'Lato';}
 .right-side .form-wrap .btn-wrap{padding:20px 0 0;}
-.right-side .form-wrap .btn-wrap .btn{width:100%;border-radius:10px;background:#4285F4;padding:10px;border:none;color:#FFFFFF;font-size: 16px;font-weight:700;font-family: Montserrat;cursor: pointer;}
-.right-side .register{font-size:16px;font-weight:400;font-family:'Lato';text-align: center;padding:20px 0 0;}
+.right-side .form-wrap .btn-wrap .btn{width:100%;border-radius:10px;background:#4285F4;padding:10px;border:none;color:#FFFFFF;font-size:16px;font-weight:700;font-family:Montserrat;cursor:pointer;}
+.right-side .register{font-size:16px;font-weight:400;font-family:'Lato';text-align:center;padding:20px 0 0;}
 .right-side .register .link{text-decoration:none;color:#346BD4;}
+
+@media (max-width:767px){
+    .sign-wrap{flex-direction:column;}
+    .sign-wrap:after{display:none;}
+    .left-side{height:auto;background-color:#346BD4;padding: 10px 20px;}
+    .left-side .text{font-size:18px;}
+    .left-side .logo{top:10px;left:20px;}
+    .left-side .social-icon{position:static;column-gap:17px;margin:2px 0 0;}
+    .left-side .social-icon a svg{width:14px}
+    .right-side{height:auto;padding:20px 0 0;}
+    .right-side .heading{font-size:28px;}
+    .right-side .other-account-wrap,
+    .right-side .form-wrap,
+    .right-side .register{margin-top:20px;}
+  };
+  @media (max-width:479px){
+    .right-side{height:auto;padding:20px;}
+    .right-side .other-account-wrap{column-gap:15px;}
+  }

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./SignIn.css";
 import {appleIcon,carbonIcon,gitIcon,googleIcon,linkdinIcon,twiterIcon} from "../../helpers/Icon";
 import {hasValidationError,validationError,focusOnFeild} from "../../helpers/frontend";
+import GoogleLogin from 'react-google-login';
+import AppleLogin from 'react-apple-login';
 
 const SignIn = () => {
     const [form,setForm] = useState({email:"",password:""});
@@ -31,6 +33,12 @@ const SignIn = () => {
         }else if (!form.password || form.password.trim().length < 8) {
             newError["password"] = "Password must be at least 8 characters";
             positionFocus = positionFocus || "password";
+        }else if (!/[A-Z]/.test(form.password)) {
+            newError["password"] = "Password must contain at least one uppercase letter";
+            positionFocus = positionFocus || "password";
+        }else if (!/\d/.test(form.password)) {
+            newError["password"] = "Password must contain at least one number";
+            positionFocus = positionFocus || "password";
         }
         setErrors(newError);
         if(positionFocus){
@@ -40,6 +48,23 @@ const SignIn = () => {
         window.location = "/admin/dashboard"
         return true;
     }
+    const responseGoogle = (response) => {
+        // Handle Google login response
+        console.log(response);
+      };
+    
+      const responseApple = (response) => {
+        // Handle Apple login response
+        console.log(response);
+      };
+
+      const CustomAppleButton = ({ onClick }) => (
+        <div className="apple" onClick={onClick}>
+          <span className="icon">{appleIcon({ width: 16, height: 16 })}</span>
+          <div className="text">Sign in with Apple</div>
+        </div>
+      );
+    
   return (
     <div className="sign-wrap">
         <div className="left-side">
@@ -58,13 +83,23 @@ const SignIn = () => {
                 <div className="sub-heading">Sign in to your account</div>
                 <div className="other-account-wrap">
                     <div className="app">
-                        <span className="icon">{googleIcon({width:16,height:16})}</span>
-                        <div className="text">Sign in with Google</div>
+                    <GoogleLogin
+                        clientId="your-google-client-id"
+                        buttonText="Sign in with Google"
+                        onSuccess={responseGoogle}
+                        onFailure={responseGoogle}
+                        cookiePolicy={'single_host_origin'}
+                    />
                     </div>
-                    <div className="app">
-                        <span className="icon">{appleIcon({width:16,height:16})}</span>
-                        <div className="text">Sign in with Apple</div>
-                    </div>
+                    <AppleLogin
+                        clientId="your-apple-client-id"
+                        redirectURI="your-apple-redirect-uri"
+                        onSuccess={responseApple}
+                        onFailure={responseApple}
+                        render={(props) => (
+                        <CustomAppleButton onClick={props.onClick} />
+                        )}
+                    />
                 </div>
                 <form action="" onSubmit={handleSubmit} className="form-wrap" autoComplete="off">
                     <div className="field-group">
@@ -74,7 +109,7 @@ const SignIn = () => {
                     </div>
                     <div className="field-group">
                         <label htmlFor="password" className="label">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Enter Password" className={`input ${(hasValidationError(errors,"password") ? "input-error" : "")}`} value={form.password} onChange={handleChange}/>
+                        <input type="password" name="password" id="password" placeholder="Enter Password" className={`input ${(hasValidationError(errors,"password") ? "input-error" : "")}`} value={form.password} onChange={handleChange} maxLength={20}/>
                         {hasValidationError(errors,"password") ? (<span className="error">{validationError(errors,"password")}</span>) : null}
                     </div>
                     <a href="/" className="forgot-link">Forgot password?</a>

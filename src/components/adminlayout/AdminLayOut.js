@@ -17,6 +17,7 @@ const AdminLayOut = () => {
     <div className="container">
         <SideBar updateHeaderTitle={updateHeaderTitle} sidebarOpen={sidebarOpen}/>
         <div className="layout">
+            {sidebarOpen && (<div className="opacity"></div>)}
             <Header page={{active:headerTitle}} toggleSidebar={toggleSidebar}/>
             <Main/>
         </div>

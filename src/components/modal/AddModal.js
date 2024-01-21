@@ -9,9 +9,21 @@ const AddModal = ({modalAction,dashBoardData,updateDashBoardData}) => {
     const [errors, setErrors] = useState({});
 
     const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
+        const {name,value} = e.target;
+        if(name == "phone"){
+            let newValue = value.replace(/[^0-9]/gi,'');
+            if(newValue == "" || newValue.length <= 10){
+                handleCustom(name,newValue);
+            }
+        }else{
+            handleCustom(name,value);
+        }
     }
-
+    const handleCustom = (name,value) => {
+        setForm((prevState) => ({...prevState,[name]: value}));
+        console.log({form})
+    }
+    
     const handleSubmit = () => {
         console.log("Form submitted successfully:", form);
         updateDashBoardData(form);
